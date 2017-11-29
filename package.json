@@ -1,0 +1,36 @@
+{
+  "name": "quoridor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env ENV_VAR=production && webpack -p",
+    "dev": "set ENV_VAR=development&&node dev-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alaboudi1/Quoridor.git"
+  },
+  "author": "Abdulaziz, Sahar and Padmavathi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alaboudi1/Quoridor/issues"
+  },
+  "homepage": "https://github.com/Alaboudi1/Quoridor#readme",
+  "dependencies": {
+    "cross-env": "^5.1.1",
+    "firebase": "^4.4.0",
+    "firebase-functions": "^0.7.1",
+    "pubsub-js": "^1.5.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.7.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
