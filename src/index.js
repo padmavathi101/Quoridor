@@ -31,7 +31,7 @@ class index {
     switch (action) {
       case "logIn":
 		var re=/^\w+@([a-zA-Z_]+?\.)+[a-zA-Z]{2,3}$/;
-		var re1=/^\w+$/;
+		var re1=/^[a-zA-Z]\w{3,14}$/;
 		if((re.test(lemail.value))&&(re1.test(lpass.value)))
 		{
 			this.hide(errMessage);
@@ -66,7 +66,7 @@ class index {
         break;
       case "signUp":
 		var re=/^\w+@([a-zA-Z_]+?\.)+[a-zA-Z]{2,3}$/;
-		var re1=/^\w+$/;
+		var re1=/^[a-zA-Z]\w{3,14}$/;
 		if((re.test(email.value))&&(re1.test(pass.value))&&(re1.test(username.value)))
 		{
 			this.hide(errMessage1);
