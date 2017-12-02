@@ -206,8 +206,40 @@ class index {
   playMove(){
     this.api.setMove(this.user.gameId, this.user.token);
   }
-}
 
+ getLeaderBoard(){
+    this.api
+      .getLeaderBoard(this.user.token)
+      .then(players=>this.displayTable(players));
+ }
+ displayTable(players){
+		var html = "<table border='1|1'>";
+		html+="<tr>";
+		html+="<th>"+"Lost"+"</th>";
+		html+="<th>"+"Win"+"</th>";
+		html+="<th>"+"numberOfGamesPlayed"+"</th>";
+		html+="<th>"+"userName"+"</th>";
+		html+="</tr>";
+		for (var i = 0; i < players.length; i++) {        
+		html+="<tr>";
+        html+="<td>"+players[i].lost+"</td>";
+        html+="<td>"+players[i].won+"</td>";
+        html+="<td>"+players[i].numberOfGamesPlayed+"</td>";
+		html+="<td>"+players[i].userName+"</td>";
+        html+="</tr>";
+    }
+    html+="</table>";
+	this.hide(mainPage);
+		this.show(leaderboard);
+		document.
+		getElementById("backButton").addEventListener("click",() => {
+			this.hide(leaderboard);
+			this.show(mainPage);
+		
+	});
+document.getElementById("leadertable").innerHTML = html;
+  }
+}
 
 const app = new index();
 document
@@ -235,4 +267,4 @@ document
   .getElementById("playMove")
   .addEventListener("click", () => app.playMove());
   document.
-	getElementById("gameStats").addEventListener("click",() => app.displaytable());
+	getElementById("gameStats").addEventListener("click",() => app.getLeaderBoard());
