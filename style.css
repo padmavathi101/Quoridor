@@ -1,0 +1,132 @@
+
+body {
+	background-color:black;
+    <!-- Write your comments here background-image: url("home_img.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+    background-size: cover-->
+	margin:0px;
+	padding:0px;
+	}
+	@font-face {
+    font-family: welcome;
+    src: url(fonts/WoodcutterTagsonaRope.ttf);
+}
+	@font-face {
+    font-family: Quoridor;
+    src: url(fonts/kidsboardgamefont.ttf);
+}
+
+
+button{
+	 background-color: brown;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+	border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+	 -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	}
+	button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+	.gametitle
+	{
+		color: rgba(220, 68, 68, 0.81);font-size:100px;text-align:center;font-family: Quoridor;
+	}
+	 @media screen and (min-width: 900px) {
+    /* STYLES HERE */
+	
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 899px) { 
+    /* STYLES HERE */
+	.gametitle
+	{
+	font-size: 75px;
+	}
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 699px) { 
+    /* STYLES HERE */
+	.gametitle
+	{
+	font-size: 53px;
+	}
+}
+    @media only screen and (max-device-width:480px){
+       .gametitle
+	   {
+		   font-size:36px;
+	   }
+    }
+  
+ .welcometxt
+ {
+	color: rgba(220, 68, 68, 0.81);font-size:80px;text-align:center;font-family: welcome;
+ }
+ .myButt {
+  outline: none;
+  padding: 20px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgba(220, 68, 68, 0.81);
+  width:100%;max-width:500px;
+  position: relative;
+  border: 2px solid white;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+ .two {
+  color: #fff;
+  border:dashed;
+}
+.two:hover {
+  border-color: black;
+  border:dashed;
+  color: black;
+  animation: shakeThat 0.3s linear 1;
+  -webkit-animation: shakeThat 0.3s linear 1;
+  -moz-animation: shakeThat 0.3s linear 1;
+  -o-animation: shakeThat 0.3s linear 1;
+  -ms-animation: shakeThat 0.3s linear 1;
+}
+
+@keyframes shakeThat {
+  33% {
+    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+  }
+  67% {
+    transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    -o-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+  }
+}
+form { 
+    display: block;
+    margin-left: 40%;
+}
+ 

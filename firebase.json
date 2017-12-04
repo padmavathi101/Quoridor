@@ -1,0 +1,42 @@
+{
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "/api/*",
+        "function": "api"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "https://us-central1-quoridor-swe681.cloudfunctions.net"
+          },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'none'; base-uri 'none'; connect-src https://s-usc1c-nss-231.firebaseio.com https://quoridor-swe681.firebaseio.com wss://s-usc1c-nss-231.firebaseio.com https://securetoken.googleapis.com https://www.googleapis.com https://us-central1-quoridor-swe681.cloudfunctions.net 'self'; font-src data: 'self'; frame-ancestors 'none'; img-src 'self'; script-src https://quoridor-swe681.firebaseio.com https://s-usc1c-nss-231.firebaseio.com 'self'; style-src 'self';"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "no-referrer, strict-origin-when-cross-origin"
+          }
+        ]
+      }
+    ]
+  }
+}

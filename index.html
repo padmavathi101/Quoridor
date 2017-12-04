@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quoridor</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="homePage">
+        <p class="gametitle">Quoridor</p>
+        <button type="button" id="authButton" class="myButt two">Login/SignUp</button>
+        <button type="button" class="myButt two">About game</button>
+    </div>
+    <div id="leaderboard">
+        <p class="gametitle">Quoridor</p>
+        <table id="leadertable">
+            <tr>
+                <th>Username</th>
+                <th>Win</th>
+                <th>Lost</th>
+            </tr>
+            <tr>
+                <th>NA</th>
+                <th>0</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>NA</th>
+                <th>0</th>
+                <th>0</th>
+            </tr>
+        </table>
+        <div>
+            <span>
+                <button type="button" id="backButton" class="myButt two">Back</button>
+            </span>
+        </div>
+    </div>
+	<div id="gamehistory">
+        <p class="gametitle">Quoridor</p>
+        <ul id="gamelist">
+		<li>hello</li>
+		</ul>	
+        <div>
+            <span>
+                <button type="button" id="backButton1" class="myButt two">Back</button>
+            </span>
+        </div>
+    </div>
+    <div id="authForm" class="">
+        <form id="form2">
+            <p>Please enter your details</p>
+            <span>
+                <label>
+                    <b>Email</b>
+                </label>
+            </span>
+            <span>
+                <input type="email" maxlength="320" placeholder="Enter Email" id="email" required value=" ">
+            </span>
+            <span>
+                <label>
+                    <b>Password</b>
+                </label>
+            </span>
+            <span>
+                <input type="password" placeholder="Enter Password" id="pass" required>
+            </span>
+            <div>
+                <span>
+                    <button type="button" id="signUp" class="myButt two">SignUp</button>
+                </span>
+                <span>
+                    <button type="button" id="logIn" class="myButt two">logIn</button>
+                </span>
+            </div>
+        </form>
+    </div>
+    <label id="errMessage" class="error"></label>
+    <div id="mainPage">
+        <label id="lableName"></label>
+
+        <p class="gametitle">Join A Game:</p>
+        <div id="waitingGames">
+
+        </div>
+
+        <p class="gametitle">Or Create A Game:</p>
+        <span>
+            <label>
+                <b>Game</b>
+            </label>
+            <input type="text" placeholder="Enter Game" id="newGame">
+            <button type="button" id="createGame" class="two">GO!</button>
+        </span>
+        <div>
+
+            <br>
+			<button type="button" class="myButt two" id="game-history">Previous games moves</button>
+            <button type="button" class="myButt two" id="gameStats">Leaderboard</button>
+            <button type="button" class="myButt two">How to play game</button>
+            <button type="button" class="myButt two" id="logOut">Log Out</button>
+        </div>
+    </div>
+    <!-- TODO -->
+
+
+    <!-- TODO -->
+    <div id="gameDIV">
+        <div>
+            <div style="text-align: center">
+                <h1><span id="label_p1_name">Player 1</span> walls:
+                    <span class="label label-default" id="label_p1_Wall">0</span>
+                </h1>
+                <h1><span id="label_p2_name">Player 2</span> walls:
+                    <span class="label label-default" id="label_p2_Wall">0</span>
+                </h1>
+            </div>
+            <div id="gameFieldDiv"></div>
+        </div>
+        <button type="button" class="myButt two" id="leave">Leave</button>
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>

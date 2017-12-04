@@ -1,0 +1,8 @@
+dist/*
+node_modules/*
+package-lock.json
+.idea/*
+src/database/dbconfig.js
+functions/node_modules/*
+.vscode/*
+functions/firebase-debug.log
